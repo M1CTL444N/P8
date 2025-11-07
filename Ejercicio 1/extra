@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int numero;
+    char continuar; 
+  // Bucle do-while: El código dentro del 'do' se ejecuta al menos una vez.
+    do {
+        // 1) Ingresar un valor por teclado
+        printf("\nIngresa un número entero: ");
+        scanf("%d", &numero); 
+
+        // 2) Determinar si es positivo, negativo o igual a cero
+        if (numero > 0) {
+            // Leyenda: Positivo
+            printf("El número %d es **Positivo**.\n", numero);
+        } else if (numero < 0) {
+            // Leyenda: Negativo
+            printf("El número %d es **Negativo**.\n", numero);
+        } else {
+            // Leyenda: Cero
+            printf("El número es **Igual a Cero**.\n");
+        }
+        
+        // Preguntar si desea continua
+        printf("\n¿Deseas intentar con otro número? (s/n): ");
+        // se la respuesta 
+        scanf(" %c", &continuar); 
+        
+    } while (continuar == 's' || continuar == 'S'); // La condición se verifica al final.
+ printf("\nPrograma finalizado.\n");
+    
+    return 0;
+}
